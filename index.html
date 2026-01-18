@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
+    <meta name="description" content="Lemongrass Takrai — Coming soon. Sign up to be notified when the new site launches.">
+    <title>Lemongrass Takrai — Coming Soon</title>
     <style>
         * {
             margin: 0;
@@ -23,17 +24,18 @@
 
         .container {
             text-align: center;
-            background: white;
+            background: #ffffff;
             padding: 60px 40px;
             border-radius: 10px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             max-width: 600px;
             width: 90%;
+            color: #222;
         }
 
         .construction-icon {
             font-size: 80px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             animation: bounce 2s infinite;
         }
 
@@ -47,15 +49,22 @@
         }
 
         h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: 36px;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 18px;
             color: #667eea;
+            font-weight: 700;
         }
 
         .subtitle {
-            font-size: 18px;
+            font-size: 16px;
             color: #666;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             line-height: 1.6;
         }
 
@@ -63,7 +72,7 @@
             background: #e0e0e0;
             height: 10px;
             border-radius: 10px;
-            margin: 30px 0;
+            margin: 20px 0;
             overflow: hidden;
         }
 
@@ -85,14 +94,14 @@
         }
 
         .message {
-            font-size: 16px;
+            font-size: 14px;
             color: #999;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .email-section {
-            margin-top: 30px;
-            padding-top: 30px;
+            margin-top: 20px;
+            padding-top: 20px;
             border-top: 1px solid #eee;
         }
 
@@ -106,7 +115,7 @@
         .email-input {
             display: flex;
             gap: 10px;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .email-input input {
@@ -124,7 +133,7 @@
         }
 
         .email-input button {
-            padding: 12px 30px;
+            padding: 12px 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
@@ -140,9 +149,9 @@
         }
 
         .social-links {
-            margin-top: 30px;
+            margin-top: 18px;
             display: flex;
-            gap: 20px;
+            gap: 12px;
             justify-content: center;
         }
 
@@ -156,7 +165,7 @@
             color: #667eea;
             text-decoration: none;
             border-radius: 50%;
-            font-size: 18px;
+            font-size: 16px;
             transition: all 0.3s;
         }
 
@@ -165,19 +174,26 @@
             color: white;
             transform: scale(1.1);
         }
+
+        .notice {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #2b7a0b;
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="construction-icon">🚀</div>
+    <div class="container" role="main">
+        <div class="construction-icon" aria-hidden="true">🚀</div>
         <h1>Lemongrass Takrai</h1>
-        <h1>Coming Soon</h1>
+        <h2>Coming Soon</h2>
         <p class="subtitle">
             We're working hard to bring you something amazing.
             <br>Our new website will be live very soon!
         </p>
 
-        <div class="progress-bar">
+        <div class="progress-bar" aria-hidden="true">
             <div class="progress-fill"></div>
         </div>
 
@@ -192,50 +208,70 @@
                     type="email" 
                     id="email" 
                     placeholder="Enter your email address"
+                    aria-label="Email address"
                 >
-                <button onclick="subscribeEmail()">Notify Me</button>
+                <button type="button" id="subscribeBtn">Notify Me</button>
             </div>
+            <div class="notice" id="notice" role="status" aria-live="polite"></div>
         </div>
 
-        <div class="social-links">
-            <a href="#" title="Twitter">𝕏</a>
-            <a href="#" title="Facebook">f</a>
-            <a href="#" title="LinkedIn">in</a>
-            <a href="#" title="Instagram">📷</a>
+        <div class="social-links" aria-label="Social links">
+            <a href="#" title="X (Twitter)" aria-label="X">𝕏</a>
+            <a href="#" title="Facebook" aria-label="Facebook">f</a>
+            <a href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
+            <a href="#" title="Instagram" aria-label="Instagram">📷</a>
         </div>
     </div>
 
     <script>
-        function subscribeEmail() {
+        (function() {
             const emailInput = document.getElementById('email');
-            const email = emailInput.value.trim();
+            const subscribeBtn = document.getElementById('subscribeBtn');
+            const notice = document.getElementById('notice');
 
-            if (!email) {
-                alert('Please enter your email address');
-                return;
+            function showNotice(msg, success = true) {
+                notice.textContent = msg;
+                notice.style.display = 'block';
+                notice.style.color = success ? '#2b7a0b' : '#b00020';
+                setTimeout(() => notice.style.display = 'none', 5000);
             }
 
-            if (!isValidEmail(email)) {
-                alert('Please enter a valid email address');
-                return;
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
             }
 
-            // Here you can add your backend API call to save the email
-            alert('Thank you! You will be notified when we launch.');
-            emailInput.value = '';
-        }
+            function subscribeEmail() {
+                const email = emailInput.value.trim();
 
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
+                if (!email) {
+                    showNotice('Please enter your email address', false);
+                    emailInput.focus();
+                    return;
+                }
 
-        // Allow Enter key to submit email
-        document.getElementById('email').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                subscribeEmail();
+                if (!isValidEmail(email)) {
+                    showNotice('Please enter a valid email address', false);
+                    emailInput.focus();
+                    return;
+                }
+
+                // TODO: Replace with real API call to subscribe the email.
+                // Example: fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) })...
+
+                showNotice('Thank you! You will be notified when we launch.');
+                emailInput.value = '';
             }
-        });
+
+            subscribeBtn.addEventListener('click', subscribeEmail);
+
+            emailInput.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    subscribeEmail();
+                }
+            });
+        })();
     </script>
 </body>
 </html>
