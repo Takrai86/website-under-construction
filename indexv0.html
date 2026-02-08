@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lemongrass Takrai — Coming soon. Sign up to be notified when the new site launches.">
+    <title>Lemongrass Takrai — Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 60px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            color: #222;
+        }
+
+        .construction-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 18px;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            height: 10px;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 65%;
+            border-radius: 10px;
+            animation: fillProgress 3s ease-in-out infinite;
+        }
+
+        @keyframes fillProgress {
+            0%, 100% {
+                width: 65%;
+            }
+            50% {
+                width: 85%;
+            }
+        }
+
+        .message {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .email-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .email-section label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .email-input {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .email-input input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .email-input input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .email-input button {
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .email-input button:hover {
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #f0f0f0;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50%;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .notice {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #2b7a0b;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" role="main">
+        <div class="construction-icon" aria-hidden="true">🚀</div>
+        <h1>Lemongrass Takrai</h1>
+        <h2>Coming Soon</h2>
+        <p class="subtitle">
+            We're working hard to bring you something amazing.
+            <br>Our new website will be live very soon!
+        </p>
+
+        <div class="progress-bar" aria-hidden="true">
+            <div class="progress-fill"></div>
+        </div>
+
+        <p class="message">
+            In the meantime, stay tuned for updates. We appreciate your patience!
+        </p>
+
+        <div class="email-section">
+            <label for="email">Get notified when we launch:</label>
+            <div class="email-input">
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="Enter your email address"
+                    aria-label="Email address"
+                >
+                <button type="button" id="subscribeBtn">Notify Me</button>
+            </div>
+            <div class="notice" id="notice" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="social-links" aria-label="Social links">
+            <a href="#" title="X (Twitter)" aria-label="X">𝕏</a>
+            <a href="#" title="Facebook" aria-label="Facebook">f</a>
+            <a href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
+            <a href="#" title="Instagram" aria-label="Instagram">📷</a>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const emailInput = document.getElementById('email');
+            const subscribeBtn = document.getElementById('subscribeBtn');
+            const notice = document.getElementById('notice');
+
+            function showNotice(msg, success = true) {
+                notice.textContent = msg;
+                notice.style.display = 'block';
+                notice.style.color = success ? '#2b7a0b' : '#b00020';
+                setTimeout(() => notice.style.display = 'none', 5000);
+            }
+
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function subscribeEmail() {
+                const email = emailInput.value.trim();
+
+                if (!email) {
+                    showNotice('Please enter your email address', false);
+                    emailInput.focus();
+                    return;
+                }
+
+                if (!isValidEmail(email)) {
+                    showNotice('Please enter a valid email address', false);
+                    emailInput.focus();
+                    return;
+                }
+
+                // TODO: Replace with real API call to subscribe the email.
+                // Example: fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) })...
+
+                showNotice('Thank you! You will be notified when we launch.');
+                emailInput.value = '';
+            }
+
+            subscribeBtn.addEventListener('click', subscribeEmail);
+
+            emailInput.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    subscribeEmail();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

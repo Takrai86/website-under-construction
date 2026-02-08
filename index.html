@@ -2,276 +2,379 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lemongrass Takrai — Coming soon. Sign up to be notified when the new site launches.">
-    <title>Lemongrass Takrai — Coming Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-        }
-
-        .container {
-            text-align: center;
-            background: #ffffff;
-            padding: 60px 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-            width: 90%;
-            color: #222;
-        }
-
-        .construction-icon {
-            font-size: 80px;
-            margin-bottom: 20px;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 6px;
-            color: #333;
-        }
-
-        h2 {
-            font-size: 28px;
-            margin-bottom: 18px;
-            color: #667eea;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .progress-bar {
-            background: #e0e0e0;
-            height: 10px;
-            border-radius: 10px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            width: 65%;
-            border-radius: 10px;
-            animation: fillProgress 3s ease-in-out infinite;
-        }
-
-        @keyframes fillProgress {
-            0%, 100% {
-                width: 65%;
-            }
-            50% {
-                width: 85%;
-            }
-        }
-
-        .message {
-            font-size: 14px;
-            color: #999;
-            margin-bottom: 20px;
-        }
-
-        .email-section {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .email-section label {
-            display: block;
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .email-input {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .email-input input {
-            flex: 1;
-            padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 5px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-        }
-
-        .email-input input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .email-input button {
-            padding: 12px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .email-input button:hover {
-            transform: translateY(-2px);
-        }
-
-        .social-links {
-            margin-top: 18px;
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #f0f0f0;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50%;
-            font-size: 16px;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: #667eea;
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .notice {
-            margin-top: 12px;
-            font-size: 14px;
-            color: #2b7a0b;
-            display: none;
-        }
-    </style>
+    <title>Lemongrass Takrai Menu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container" role="main">
-        <div class="construction-icon" aria-hidden="true">🚀</div>
+
+    <header>
         <h1>Lemongrass Takrai</h1>
-        <h2>Coming Soon</h2>
-        <p class="subtitle">
-            We're working hard to bring you something amazing.
-            <br>Our new website will be live very soon!
-        </p>
+        <p>Thai & Cambodian Cuisine</p>
+    </header>
 
-        <div class="progress-bar" aria-hidden="true">
-            <div class="progress-fill"></div>
+    <section class="menu">
+        <h2>🍜Appetizers</h2>
+	<div class="image-container">
+  		<img src="images/vegie sroll.jpg" alt="Description of image 1">
+  		<img src="images/mixed.jpg" alt="Description of image 2">
+		<img src="images/fish cake.jpg" alt="Description of image 3">
+	</div>
+        <div class="item">
+            <h3>1.Spring Rolls (4pcs) Vegie</h3>
+            <p>Crispy deep fried vegetable & vermicelli spring rolls served with sweet sauce.</p>
+            <span>$8.90</span>
+        </div>
+	<div class="item">
+            <h3>2.Money Bags (4pcs)</h3>
+            <p>Chicken & prawn minced with crushed peanuts & herbs wrapped in a crispy spring roll crepe served with sweet sauce.</p>
+            <span>$8.90</span>
         </div>
 
-        <p class="message">
-            In the meantime, stay tuned for updates. We appreciate your patience!
-        </p>
-
-        <div class="email-section">
-            <label for="email">Get notified when we launch:</label>
-            <div class="email-input">
-                <input 
-                    type="email" 
-                    id="email" 
-                    placeholder="Enter your email address"
-                    aria-label="Email address"
-                >
-                <button type="button" id="subscribeBtn">Notify Me</button>
-            </div>
-            <div class="notice" id="notice" role="status" aria-live="polite"></div>
+        <div class="item">
+            <h3>3.Curry Puffs (4pcs)</h3>
+            <p>Deep fried puff pastry stuffed with minced beef & curried, potatoes served with sweet sauce.</p>
+            <span>$8.90</span>
+        </div>
+	
+	<div class="item">
+            <h3>4.Spring Rolls (4pcs) Chicken</h3>
+            <p>Deep fried chicken mince and vegetables spring rolls served with sweet sauce.</p>
+            <span>$9.90</span>
+        </div>
+	
+	<div class="item">
+            <h3>5.Fish Cakes (4pcs)</h3>
+            <p>Deep fried minced fish fillets blended with chilli paste & herbs served with sweet sauce.</p>
+            <span>$8.90</span>
+        </div>
+		
+	<div class="item">
+            <h3>6.Satay Skewers (4pcs)</h3>
+            <p>Grilled marinated chicken breast filleted on skewered served with our tasty peanut sauce.</p>
+            <span>$9.90</span>
+        </div>
+	
+	<div class="item">
+            <h3>7.Mixed Entrees (5pcs)</h3>
+            <p>A combination of vegetarian & chicken spring rolls, money bag, curry puff & fish cake.</p>
+            <span>$10.90</span>
         </div>
 
-        <div class="social-links" aria-label="Social links">
-            <a href="#" title="X (Twitter)" aria-label="X">𝕏</a>
-            <a href="#" title="Facebook" aria-label="Facebook">f</a>
-            <a href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
-            <a href="#" title="Instagram" aria-label="Instagram">📷</a>
+        <h2>🍛 Salads</h2>
+
+	<div class="image-container">
+  		<img src="images/pleah.jpg" alt="Description of image 1">
+  		<img src="images/ngoum.jpg" alt="Description of image 2">
+	
+	</div>
+
+        <div class="item">
+            <h3>8.Gai Yang</h3>
+            <p>grilled marinated chicken served with a refreshing light salad</p>
+            <span>$16.90</span>
         </div>
-    </div>
 
-    <script>
-        (function() {
-            const emailInput = document.getElementById('email');
-            const subscribeBtn = document.getElementById('subscribeBtn');
-            const notice = document.getElementById('notice');
+        <div class="item">
+            <h3>9.Lemongrass Salad</h3>
+            <p>This tasty signature dish of braised chicken fillets tossed with fresh lemongrass, kaffar leaves, mint & fried onions and our unique lime sauce is served on a bed of lettuce.</p>
+            <span>$16.90</span>
 
-            function showNotice(msg, success = true) {
-                notice.textContent = msg;
-                notice.style.display = 'block';
-                notice.style.color = success ? '#2b7a0b' : '#b00020';
-                setTimeout(() => notice.style.display = 'none', 5000);
-            }
+        <div class="item">
+            <h3>10.Chilli Beef</h3>
+            <p>spicy beef fillets served on a light salad dressed.</p>
+            <span>$17.90</span>
+        </div>
 
-            function isValidEmail(email) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailRegex.test(email);
-            }
+        <div class="item">
+            <h3>11.Pleah</h3>
+            <p>cambodian beef salad tossed with sliced capsicum, cabbage, red onion & herbs.</p>
+            <span>$17.90</span>
+        </div>
 
-            function subscribeEmail() {
-                const email = emailInput.value.trim();
+        <div class="item">
+            <h3>12.Nghaom</h3>
+            <p>Simple but flavoursome Cambodian poached chicken tossed with grated cabbage carrots, cucumber, peanuts & fresh herbs.</p>
+            <span>$17.90</span>
+        </div>
 
-                if (!email) {
-                    showNotice('Please enter your email address', false);
-                    emailInput.focus();
-                    return;
-                }
+        <div class="item">
+            <h3>13.Noodle Salad</h3>
+            <p>Vermicilli noodles, salad, chicken mince & peanuts tossed in our home made dressing.</p>
+            <span>$17.90</span>
+        </div>
 
-                if (!isValidEmail(email)) {
-                    showNotice('Please enter a valid email address', false);
-                    emailInput.focus();
-                    return;
-                }
+        <div class="item">
+            <h3>14.Larb</h3>
+            <p>Popular Thai salad with your choice of warm minced chicken tossed with chopped red onion, herbs & our tasty lime dressing served on a bed of lettuce.</p>
+            <span>$17.90</span>
+        </div>
 
-                // TODO: Replace with real API call to subscribe the email.
-                // Example: fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) })...
 
-                showNotice('Thank you! You will be notified when we launch.');
-                emailInput.value = '';
-            }
+        </div>
 
-            subscribeBtn.addEventListener('click', subscribeEmail);
+        <h2> Soups</h2>
+        <div class="item">
+            <h3>15.Tom Yum </h3>
+            <p>popular spicy & sour soup broth </p>
+            <span> Vegie or chicken  $12.90 prawns $13.90 Extras Tofu +$1 Noodles +$3</span>
+        </div>
 
-            emailInput.addEventListener('keydown', function(event) {
-                if (event.key === 'Enter') {
-                    event.preventDefault();
-                    subscribeEmail();
-                }
-            });
-        })();
-    </script>
+        <div class="item">
+            <h3>16.Tom Kha</h3>
+            <p> creamy coconut brith with galangal and lemongrass.</p>
+	    <span> Vegie or chicken  $12.90 prawns $13.90 Extras Tofu +$1 Noodles +$3</span>
+        </div>
+
+        <div class="item">
+            <h3>17.Som Lor </h3>
+            <p>Cambodian mild chicken broth </p>
+	    <span> Vegie or chicken  $12.90 prawns $13.90 Extras Tofu +$1 Noodles +$3</span>
+        </div>
+
+        <div class="item">
+            <h3>18.Laksa</h3>
+            <p>Popular curry vermicilli noodle soup.</p>
+            <span> Vegie $15.90 chicken, beef or tofu $16.90 prawns or seafood $19.90 </span>
+        </div>
+
+        <h2>Curries GF</h2>
+	<p> (rice not included) </p>
+	<div class="image-container">
+  		<img src="images/yel.jpg" alt="Description of image 1">
+  		<img src="images/grn.jpg" alt="Description of image 2">
+		<img src="images/muss.jpg" alt="Description of image 3">
+	</div>
+
+        <div class="item">
+            <h3>19.Green Curry</h3>
+            <p>Distinctly Thai sweet & spicy green curry paste with bamboo shoots, vegetables & basil, simmered with rich coconut milk.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90/span>
+        </div>
+
+        <div class="item">
+            <h3>20.Red Curry</h3>
+            <p>Light & creamy spicy Thai red curry paste with bamboo shoots, vegetables & basil, simmered with rich coconut milk.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>21.Yellow Curry</h3>
+            <p>A colourful mild Thai curry paste with onion, carrots, eggplant & potatoes, simmered with rich coconut milk.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>22.Khmer Curry</h3>
+            <p>Spicy Cambodian creamy curry with eggplant, pumpkin, peanuts & potatoes.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>23.Panang Curry</h3>
+            <p>Spicy thick Thai panang curry paste uniquely cooked with pumpkin & ground peanuts simmered with rich coconut milk.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>24.Massaman Curry (Beef Only)</h3>
+            <p>Mild curry with potatoes and peanuts</p>
+            <span>$18.90</span>
+        </div>
+
+        <h2>🍛 Stir fries</h2>
+	<p> (rice not included) </p>
+
+	<div class="image-container">
+  		<img src="images/cashew.jpg" alt="Description of image 1">
+  		<img src="images/lgrass.jpg" alt="Description of image 2">
+		<img src="images/ginger.jpg" alt="Description of image 3">
+	</div>
+
+        <div class="item">
+            <h3>25.Basil</h3>
+            <p>Popular Thai basil stir fry is slightly sweet with seasonal vegetables & fresh basil with a hint of chilli.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>26.Lemongrass</h3>
+            <p>One of our singature Cambodian dishes this stir fry is cooked with freshly grounded lemongrass & vegetables, with rich coconut cream & crushed peanuts.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>27.Ginger</h3>
+            <p>A light and fresh Cambodian stir fry cooked with freshly shredded ginger & vegetables, topped with basil & cashew nuts.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>28.Oyster</h3>
+            <p>Enjoy the robust flavours of oysters sauce stir fried with seasonal vegetables.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>29.Cashew</h3>
+            <p>A mild Thai stir fry is tossed with seasonal vegetables & cashew nuts with a hint of chilli.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>30.Pepper & Garlic</h3>
+            <p>Using freshly crushed grounded black peppercorns this stir fry is tossed with garlic & seasonal vegetables.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>31.Satay</h3>
+            <p>With mixed seasonal vegetables topped with our unique sweet peanut sauce this popular Thai stir fry is exceptional in both flavour & fragrance.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>32.Chilli Jam</h3>
+            <p>A mild Thai stir fry is tossed with chilli jam paste & vegetables & cashew nuts with a hint of chilli.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+	<h2>🍛 Noodles</h2>
+
+	<div class="image-container">
+  		<img src="images/pse.jpg" alt="Description of image 1">
+  		<img src="images/pkm.jpg" alt="Description of image 2">
+		<img src="images/sing.jpg" alt="Description of image 3">
+	</div>
+
+        <div class="item">
+            <h3>33.Pad See Ew</h3>
+            <p>This popular Thai fresh flat rice noodle is sweet in flabvour, is tossed with Chinese broccoli, egg in a light soy sauce.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>34.Pad Thai</h3>
+            <p>One of Thailand's most natable dishes, this noodle dish uses thin rice noodles with egg, peanuts, tofu, shallots & bean sprouts cooked with our very flavoursome unique pad Thai sauce.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>35.Pad Kee Mao</h3>
+            <p>With fresh sweet basil tossed in this spicy Thai noodle dish is cooked with fresh flat rice noodles & vegetables.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>36.Pad Hokkien</h3>
+            <p>For those seeking milder noodles, hokkien egg noodles are for you, this stir fry is cooked with egg & vegetables in a light soy sauce.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>37.Pad Satay</h3>
+            <p>For lovers of peanut sauce and noodles this ones for you, cooked using fresh flat rice noodles & vegetables in a light soy sauce, this dish is topped with our unique sweet peanut sauce.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>38.Pad Suki</h3>
+            <p>One of our singature Cambodian dishes this stir fry is cooked with freshly grounded lemongrass & vegetables, with rich coconut cream & crushed peanuts.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>39.Pad Bee Hoon</h3>
+            <p>Typical home cooked Cambodian non-spicy noodle dish using vermicelli noodles with egg & vegetables.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+        <div class="item">
+            <h3>40.Pad Singapore</h3>
+            <p>Always popular this mild curry stir fry with vermicelli noodles, vegetables, bean sprouts & shallots.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+
+	<h2>Fried Rice</h2>
+
+	<div class="image-container">
+  		<img src="images/frice.jpg" alt="Description of image 1">
+  		<img src="images/pinerice.jpg" alt="Description of image 2">
+		<img src="images/brice.jpg" alt="Description of image 3">
+	</div>
+        
+        <div class="item">
+            <h3>41.Special Thai Fried Rice</h3>
+            <p>One of our signature dishes, the special Thai fried rice is cooked with fresh vegetables & egg is a consistent taste pleaser.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+	</div>
+	<div class="item">
+            <h3>42.Basil Fried Rice</h3>
+            <p>A unique spicy combination of fresh Thai basli stir fried with rice with vegetables, egg & chilli.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+        </div>
+        <div class="item">
+            <h3>43.Pineapple Fried Rice</h3>
+            <p>This sweet tropical blend of pineapple & fried rice with fresh tomatoes, onions & egg.</p>
+            <span>Vegie $15.90, Chicken, Beef or Pork $16.90 OR Prawns or Seafood $19.90</span>
+        </div>
+	
+	<div class="item">
+            <h3>44.Steamed Jasime Rice</h3>
+            <span>Sml $3.00 OR Lrg $4.50</span>
+        </div>
+
+	<h2>🍛 Extras</h2>
+        <div class="item">
+            <h3>Fried Egg</h3>
+            <span>$3.00</span>
+        </div>
+
+	<div class="item">
+            <h3>Peanut Sauce</h3>
+            <span>$3.00</span>
+        </div>
+
+	<div class="item">
+            <h3>Cashew Nuts</h3>
+            <span>$3.00</span>
+        </div>
+
+	<h2>🍛 Beaverages</h2>
+        <div class="item">
+            <h3>Soft Drink Cans</h3>
+            <span>Coke, Zero, Lemonade $3.00</span>
+        </div>
+	<div class="item">
+            <h3>Still Water </h3>
+            <span>$3.00</span>
+        </div>
+	<div class="item">
+            <h3>Sparkling Water </h3>
+            <span>$4.50</span>
+        </div>
+	<div class="item">
+            <h3>Iced Teas </h3>
+            <span>$4.50</span>
+        </div>
+	<div class="item">
+            <h3>Ginger Beer </h3>
+            <span>$4.50</span>
+        </div>
+
+ </section>
+<section>
+    <header>
+        <h1>Lunch Specials</h1>
+        <p>Available from 11am to 3pm</p>
+    </header>
+
+<img src="images/2025 LS Screenr2.jpg" alt="Lunch Menu" width="1200" height="550" />
+
+    <footer>
+        <p>📍 86 Union St, Pyrmont 2009 | ☎ 02 9552 2558</p>
+    </footer>
+</section>
 </body>
 </html>

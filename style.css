@@ -1,0 +1,83 @@
+.image-container 
+{
+  display: flex; /* Activates Flexbox layout */
+  justify-content: center; /* Centers images within the container (optional) */
+  gap: 20px; /* Adds space between images */
+}
+
+.image-container img 
+{
+  width: 50%; /* Makes each image take up half the container width */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Optional: Basic responsiveness for small screens */
+@media (max-width: 600px) 
+{
+  .image-container 
+  {
+    flex-direction: column; /* Stacks images vertically on small screens */
+  }
+  .image-container img 
+  {
+    width: 100%; /* Makes images full width */
+  }
+}
+
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    margin: 0;
+    padding: 0;
+}
+
+header 
+{
+    background-color: #9AE630;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu 
+{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+h2 
+{
+    color: #c0392b;
+    border-bottom: 2px solid #c0392b;
+}
+
+.item 
+{
+    margin: 15px 0;
+}
+
+.item h3 
+{
+    margin: 0;
+}
+
+.item p 
+{
+    margin: 5px 0;
+    color: #555;
+}
+
+.item span 
+{
+    font-weight: bold;
+    color: #000;
+}
+
+footer 
+{
+    text-align: center;
+    background-color: #eee;
+    padding: 12px;
+}
